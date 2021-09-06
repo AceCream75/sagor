@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1022360656150",
+    "project_id": "uthao-b4bff",
+    "storage_bucket": "uthao-b4bff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022360656150:android:9aaeb6b904533c4263d837",
+        "android_client_info": {
+          "package_name": "com.example.uthao1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022360656150-027a65k44putivs0j9ogq5m0n0ro5612.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQZZjJdYlT88cdpD4Nc1H1X-aTPW0lLx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022360656150-027a65k44putivs0j9ogq5m0n0ro5612.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
