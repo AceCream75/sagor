@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1022360656150",
-    "project_id": "uthao-b4bff",
-    "storage_bucket": "uthao-b4bff.appspot.com"
+    "project_number": "601675737868",
+    "project_id": "uthao1-7c0e4",
+    "storage_bucket": "uthao1-7c0e4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1022360656150:android:9aaeb6b904533c4263d837",
+        "mobilesdk_app_id": "1:601675737868:android:8dc1c2a0c669c01295b729",
         "android_client_info": {
           "package_name": "com.example.uthao1"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1022360656150-027a65k44putivs0j9ogq5m0n0ro5612.apps.googleusercontent.com",
+          "client_id": "601675737868-733reo1oot1b44pqvoikhr1krn17oa99.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAQZZjJdYlT88cdpD4Nc1H1X-aTPW0lLx0"
+          "current_key": "AIzaSyDxJGfdgMlYw24gqOdn0qWoSDi4liU1J9A"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1022360656150-027a65k44putivs0j9ogq5m0n0ro5612.apps.googleusercontent.com",
+              "client_id": "601675737868-733reo1oot1b44pqvoikhr1krn17oa99.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

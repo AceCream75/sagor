@@ -2,7 +2,10 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:uthao1/AllScreens/loginScreen.dart';
+import 'package:uthao1/AllScreens/mainscreen.dart';
+import 'package:uthao1/main.dart';
 
 
 class RegistrationScreen extends StatelessWidget
@@ -14,6 +17,8 @@ class RegistrationScreen extends StatelessWidget
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController phoneTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
+
+  // get firebaseUser => null;
 
 
 
@@ -133,8 +138,27 @@ class RegistrationScreen extends StatelessWidget
                       ),
                       onPressed: ()
                       {
-                        registerNewUser(context);
-                      },
+                        if(nameTextEditingController.text.length < 3){
+
+                          displayToastMessage("name must be at least 3 characters.", context);
+                        }
+                        else if (!emailTextEditingController.text.contains("@"))
+                          {
+                            displayToastMessage("Email address is not valid.", context);
+                          }
+                        else if (phoneTextEditingController.text.isEmpty)
+                          {
+                            displayToastMessage("Contact number is needed!", context);
+                          }
+                        else if (passwordTextEditingController.text.length < 7)
+                        {
+                          displayToastMessage("Password must be at least 7 characters.", context);
+                        }
+                        else
+                        {
+                          registerNewUser(context);
+                        }
+                        },
                     )
                   ],
                 ),
@@ -185,7 +209,37 @@ class RegistrationScreen extends StatelessWidget
     } catch (e) {
       print(e);
     }
+
+
+    if(firebaseUser !=Null)
+      {
+
+
+        Map userDataMap = {
+
+          "name": nameTextEditingController.text.trim(),
+          "email": emailTextEditingController.text.trim(),
+          "phone": phoneTextEditingController.text.trim(),
+
+        };
+
+        usersRef.child(firebaseUser.uid).set(userDataMap);
+        displayToastMessage("Congratulations, your account has been created.", context);
+
+        Navigator.pushNamedAndRemoveUntil(context, MainScreen.idScreen, (route) => false);
+
+      }
+    else
+      {
+        displayToastMessage("New user account has not been created.", context);
+      }
   }
+
   }
+
+displayToastMessage(String message, BuildContext context)
+{
+  Fluttertoast.showToast(msg: message);
+}
 
 
